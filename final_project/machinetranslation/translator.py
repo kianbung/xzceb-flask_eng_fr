@@ -26,6 +26,8 @@ def english_to_french(english_text):
     french_text = language_translator.translate(
         text=english_text,
         model_id='en-fr').get_result()
+
+    # TODO: regex + pruning result to french_text
     return french_text
 
 # fr-en translate
@@ -36,4 +38,6 @@ def french_to_english(french_text):
     english_text = language_translator.translate(
         text=french_text,
         model_id='fr-en').get_result()
+
+    # TODO: regex + pruning result to english_text
     return english_text
