@@ -19,15 +19,21 @@ language_translator = LanguageTranslatorV3(
 language_translator.set_service_url(url)
 
 # en-fr translate
-def english_to_french(englishText):
-    frenchText = language_translator.translate(
-        text=englishText,
+def english_to_french(english_text):
+    if english_text == None:
+        print("Input must not be null")
+        return None
+    french_text = language_translator.translate(
+        text=english_text,
         model_id='en-fr').get_result()
-    return frenchText
+    return french_text
 
 # fr-en translate
-def french_to_english(frenchText):
-    englishText = language_translator.translate(
-        text=frenchText,
+def french_to_english(french_text):
+    if french_text == None:
+        print("Input must not be null")
+        return None
+    english_text = language_translator.translate(
+        text=french_text,
         model_id='fr-en').get_result()
-    return englishText
+    return english_text
