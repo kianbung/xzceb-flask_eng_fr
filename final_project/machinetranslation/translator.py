@@ -19,14 +19,14 @@ language_translator = LanguageTranslatorV3(
 language_translator.set_service_url(url)
 
 # en-fr translate
-def englishToFrench(englishText):
+def english_to_french(englishText):
     frenchText = language_translator.translate(
         text=englishText,
         model_id='en-fr').get_result()
     return frenchText
 
 # fr-en translate
-def frenchToEnglish(frenchText):
+def french_to_english(frenchText):
     englishText = language_translator.translate(
         text=frenchText,
         model_id='fr-en').get_result()
