@@ -20,7 +20,7 @@ language_translator.set_service_url(url)
 
 # en-fr translate
 def english_to_french(english_text):
-    if english_text == None:
+    if english_text is None:
         print("Input must not be null")
         return None
     french_text = language_translator.translate(
@@ -30,7 +30,7 @@ def english_to_french(english_text):
 
 # fr-en translate
 def french_to_english(french_text):
-    if french_text == None:
+    if french_text is None:
         print("Input must not be null")
         return None
     english_text = language_translator.translate(
